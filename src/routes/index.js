@@ -3,7 +3,7 @@
 const express = require("express");
 const router = express.Router();
 
-const varTitle = process.env.TITLE || "Sample NodeJs deployed by DigitalRig";
+const varTitle = process.env.TITLE || "Sample NodeJs deployed by DigitalRig Team";
 const varMessage = process.env.MESSAGE || "Hello world!";
 
 /* GET home page. */

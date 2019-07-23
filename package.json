@@ -1,5 +1,5 @@
 {
-  "name": "cf-sample-app-nodejs-app",
+  "name": "cf-sample-app-nodejs",
   "description": "A sample Node.js application to run on Cloud Foundry out of the box",
   "keywords": [
     "cloud-foundry"
