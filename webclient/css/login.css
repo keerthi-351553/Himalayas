@@ -1,0 +1,229 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  max-height:98%;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="username"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/* patient */
+
+.form-group {
+  margin-top: 15px;
+}
+
+.ui.form .field {
+  margin-bottom: 0 !important;
+}
+
+.ui.radio.checkbox .box:before, .ui.radio.checkbox label:before {
+  border-color: orange;
+}
+
+.ui.radio.checkbox input:checked~.box:after, .ui.radio.checkbox input:checked~label:after {
+  background-color: orange !important;
+}
+
+.ReactTable .rt-thead.-header {
+  box-shadow: 0 1px 10px 0 orange !important;
+}
+
+.navbar-default {
+  border-color: orange !important;
+}
+.ReactTable .-pagination .-pageSizeOptions {
+    display: none !important;
+}
+.ReactTable .-pagination {
+  box-shadow: 0 0 5px 0 orange !important;
+  border-top: none !important;
+}
+
+.ReactTable input, .ReactTable select {
+  border-color: orange !important;
+}
+
+element.style {
+  flex: 100 0 auto;
+  width: 100px;
+}
+
+.ReactTable .rt-thead .rt-th.-sort-asc, .ReactTable .rt-thead .rt-td.-sort-asc {
+  box-shadow: inset 0 3px 0 0 orange !important;
+}
+
+.ui.input input {
+  border-color: orange !important;
+}
+
+.ui.input input {
+  padding: 6px !important;
+}
+
+#closeIconPosition {
+  position: absolute;
+  float: right;
+  margin-top: -5%;
+  color: orange;
+  margin-left: 100%;
+  cursor:pointer;
+}
+
+@media(max-width:760px) {
+  #tableSize {
+    margin-top: 6%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media(min-width:761px) {
+  #tableSize {
+    margin: 2% 3%;
+  }
+}
+
+@media(max-width:760px) {
+  #feedbackPosition {
+    margin-top: 16% !important;
+  }
+}
+
+@media(min-width:761px) {
+  #feedbackPosition {
+    margin-top: 3% !important;
+  }
+}
+
+@media(max-width:760px) {
+  #logoutPosition {
+    margin-top: 10%;
+  }
+}
+
+@media(min-width:761px) {
+  #logoutPosition {
+    margin-top: 3%;
+  }
+}
+
+@media(max-width:760px) {
+  #iconPosition {
+    padding-top: 40%;
+  }
+}
+
+@media(min-width:761px) {
+  #iconPosition {
+    float: right;
+    padding-top: 5%;
+  }
+}
+
+@media(max-width:760px) {
+  #iconPosition1 {
+    padding-top: 40%;
+  }
+}
+
+@media(min-width:761px) {
+  #iconPosition1 {
+    padding-top: 7%;
+  }
+}
+
+@media(max-width:760px) {
+  #logout {
+    margin-top: -15%;
+    margin-right: 6%;
+  }
+}
+
+@media(min-width:761px) {
+  #logout {
+    margin-top: 4% !important;
+    margin-right: 5% !important;
+  }
+}
+
+@media(max-width:760px) {
+  #spacingTop {
+    margin-left: -10% !important;
+  }
+}
+
+@media(min-width:761px) {
+  #spacingTop {
+    margin-left: 0% !important;
+  }
+}
+
+@media(max-width:760px) {
+  #spacingTop1 {
+    margin-left: 30% !important;
+  }
+}
+
+@media(min-width:761px) {
+  #spacingTop1 {
+    margin-left: 60% !important;
+  }
+}
+
+@media(max-width:760px) {
+  #imgSize {
+    width: 100px !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+height:100px !important;
+  }
+}
+
+@media(min-width:761px) {
+  #imgSize {
+    width: 100px !important;
+    margin-top: 10%;
+    margin-bottom: 10%;
+height:100px !important;
+  }
+}

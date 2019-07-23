@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for HospitalManagement\server\patients\patientController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">HospitalManagement/server/patients/</a> patientController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.03% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>16/145</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.19% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/143</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+const logger = require('./../../applogger');
+const {patient} = require('./patientEntity');
+const {user} = require('../users/userEntity');
+const {phlebo} = require('../phlebotomist/phlebotomistEntity');
+&nbsp;
+//  @Mayanka: adding patients to both users and patients schema
+let addPatient = (req, res) =&gt; {//console.log('the rspobse'+req.body);
+<span class="cstat-no" title="statement not covered" >let newPatient = new patient({</span>
+  PatientID: req.body.PatientID,
+  FirstName : req.body.FirstName,
+  LastName: req.body.LastName,
+  Age : req.body.Age,
+  DateOfBirth: req.body.DateOfBirth,
+  Gender: req.body.Gender,
+  Address: req.body.Address,
+  ContactNumber: req.body.ContactNumber,
+  ProfilePhoto:req.body.ProfilePhoto
+});
+<span class="cstat-no" title="statement not covered" >let newUser = new user({</span>
+  Username : req.body.PatientID,
+  Password : 'max@123',
+  Loginid : req.body.PatientID,
+  Role : 'PA',
+  EmailId:req.body.Email
+});
+<span class="cstat-no" title="statement not covered" >newPatient.save().then((docs) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  res.send(docs);</span>
+}, (err) =&gt; {
+<span class="cstat-no" title="statement not covered" >  res.status(400).send(err);</span>
+<span class="cstat-no" title="statement not covered" >  logger.debug('error occurred while adding');</span>
+});
+<span class="cstat-no" title="statement not covered" >newUser.save().then((docs) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  logger.debug(docs);</span>
+<span class="cstat-no" title="statement not covered" >  res.send(docs);</span>
+}, (err) =&gt; {
+<span class="cstat-no" title="statement not covered" >  res.status(400).send(err);</span>
+<span class="cstat-no" title="statement not covered" >  logger.debug('error occurred while adding');</span>
+});
+};
+&nbsp;
+&nbsp;
+let  addAppointment = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  console.log('in add appointment'+ req.body.PatientID, req.body.AppointmentID ,req.body.PreferredTime, req.body.PreferredDate);</span>
+<span class="cstat-no" title="statement not covered" >  let PatientID = req.body.PatientID;</span>
+<span class="cstat-no" title="statement not covered" >  let AppointmentID =  req.body.AppointmentID;</span>
+<span class="cstat-no" title="statement not covered" >  let PreferredTime =  req.body.PreferredTime;</span>
+<span class="cstat-no" title="statement not covered" >  let PreferredDate = req.body.PreferredDate;</span>
+<span class="cstat-no" title="statement not covered" >  patient.findOneAndUpdate({</span>
+    'PatientID' : PatientID
+  }, {
+    $push: {
+      AppointmentRecord: {
+        AppointmentID: AppointmentID,
+        PreferredDate: PreferredDate,
+        PreferredTime: PreferredTime
+      }
+    }
+  },<span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {<span class="cstat-no" title="statement not covered" >console.log('errrrrrrrrrr'+err);</span></span>
+<span class="cstat-no" title="statement not covered" >    res.send(err);</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    res.send('sucess');</span>
+  }
+});
+};
+&nbsp;
+let viewPatients =  (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  patient.find().then((docs) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    res.send(docs);</span>
+  });
+};
+&nbsp;
+let viewPatientWithId = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  console.log("imnside bedi");</span>
+<span class="cstat-no" title="statement not covered" >  patient.find({PatientID:req.body.PatientID}).then((docs) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    res.send(docs);</span>
+  });
+};
+&nbsp;
+let viewAppointment = (req,res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  var PatientID = req.body.pid;</span>
+  // console.log('view apointment'+PatientID);
+<span class="cstat-no" title="statement not covered" >  patient.find({PatientID: PatientID}).then((docs) =&gt; {</span>
+    // console.log('the doocs'+JSON.stringify(docs));
+<span class="cstat-no" title="statement not covered" >    res.send(docs);</span>
+  }, (err) =&gt; {
+<span class="cstat-no" title="statement not covered" >    res.send('Cant get the docs', err);</span>
+  });
+};
+&nbsp;
+let scheduleAppointment = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  var PatientID = req.body.pid;</span>
+<span class="cstat-no" title="statement not covered" >  var AppointmentID = req.body.aid;</span>
+<span class="cstat-no" title="statement not covered" >  console.log(PatientID+"..........."+AppointmentID);</span>
+<span class="cstat-no" title="statement not covered" >  var date = req.body.date;</span>
+<span class="cstat-no" title="statement not covered" >  var time = req.body.time;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  patient.findOneAndUpdate({</span>
+    'PatientID': PatientID
+  }, {
+    '$push': {
+      AppointmentRecord: {
+        AppointmentID:AppointmentID,
+        'PreferredDate': date,
+        'PreferredTime': time,
+        // Status:'Completed',
+        // AssignedPhelbo:{
+        //   Name:'Sunil Kumar',
+        //   ID:'PH1',
+        //   CheckIn:'00:00',
+        //   CheckOut:'00:00'
+        // }
+      }
+    }
+  }, <span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      res.send(err);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      res.json({message: 'User updated successfully'});</span>
+    }
+  });
+};
+&nbsp;
+let viewParticularAppointment = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  var PatientID = req.body.pid;</span>
+<span class="cstat-no" title="statement not covered" >  var AppointmentID = req.body.aid;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  patient.find({PatientID: PatientID,"AppointmentRecord.AppointmentID":AppointmentID}).then((docs) =&gt; {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    res.send(docs);</span>
+  }, (err) =&gt; {
+<span class="cstat-no" title="statement not covered" >    res.send('Cant get the docs', err);</span>
+  });
+}
+let reScheduleAppointment = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  console.log("inside data");</span>
+<span class="cstat-no" title="statement not covered" >  var PatientID = req.body.pid;</span>
+<span class="cstat-no" title="statement not covered" >  var AppointmentID = req.body.aid;</span>
+<span class="cstat-no" title="statement not covered" >  var phid = req.body.phid;</span>
+<span class="cstat-no" title="statement not covered" >  var date = req.body.date;</span>
+<span class="cstat-no" title="statement not covered" >  var time = req.body.time;</span>
+<span class="cstat-no" title="statement not covered" >  patient.update({</span>
+    'PatientID': PatientID,
+    'AppointmentRecord.AppointmentID': AppointmentID
+  }, {
+    $set: {
+      'AppointmentRecord.$.PreferredDate': date,
+      'AppointmentRecord.$.PreferredTime': time,
+      'AppointmentRecord.$.Status':'Unassigned',
+      'AppointmentRecord.$.AssignedPhelbo.ID':'',
+      'AppointmentRecord.$.AssignedPhelbo.Name':'',
+      'AppointmentRecord.$.AssignedPhelbo.CheckIn':'',
+      'AppointmentRecord.$.AssignedPhelbo.CheckOut':''
+    }
+  }, <span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      res.send(err);</span>
+    }  else {
+<span class="cstat-no" title="statement not covered" >      if(phid != '' &amp;&amp; phid != undefined){</span>
+<span class="cstat-no" title="statement not covered" >        phlebo.find({'PhleboID':phid}).then((docs) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          docs[0].AllocationStatus.map((item)=&gt;{</span>
+            // console.log(item.Slot1.AppointmentID,"$$",item.Slot1.PatientID,"$$",item.Date);
+<span class="cstat-no" title="statement not covered" >            if(item.Slot1.AppointmentID == AppointmentID &amp;&amp; item.Slot1.PatientID ==PatientID) {</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot1.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot1.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot1.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot1.AppointmentID = "";</span>
+            }
+            else <span class="cstat-no" title="statement not covered" >if(item.Slot2.AppointmentID == AppointmentID &amp;&amp; item.Slot2.PatientID == PatientID) {</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot2.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot2.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot2.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot2.AppointmentID = "";</span>
+            }
+            else <span class="cstat-no" title="statement not covered" >if(item.Slot3.AppointmentID == AppointmentID &amp;&amp; item.Slot3.PatientID == PatientID) {</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot3.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot3.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot3.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot3.AppointmentID = "";</span>
+            }
+            else <span class="cstat-no" title="statement not covered" >if(item.Slot4.AppointmentID == AppointmentID &amp;&amp; item.Slot4.PatientID == PatientID) {</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot4.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot4.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot4.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >              item.Slot4.AppointmentID = "";</span>
+            }
+          });
+<span class="cstat-no" title="statement not covered" >          docs[0].save(<span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (err)</span>
+<span class="cstat-no" title="statement not covered" >            throw err;</span>
+            else {
+<span class="cstat-no" title="statement not covered" >              res.send("success");</span>
+            }
+          });
+        });
+      }
+      else{
+<span class="cstat-no" title="statement not covered" >        res.send("success");</span>
+      }
+    }
+  });
+};
+&nbsp;
+let cancelAppointment = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  var pid = req.body.pid;</span>
+<span class="cstat-no" title="statement not covered" >  var aid = req.body.aid;</span>
+<span class="cstat-no" title="statement not covered" >  var phid = req.body.phid;</span>
+<span class="cstat-no" title="statement not covered" >  console.log('..........pid',pid);</span>
+<span class="cstat-no" title="statement not covered" >  console.log('.........aid',aid);</span>
+<span class="cstat-no" title="statement not covered" >  console.log('...........phid',phid);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  patient.update({</span>
+    'PatientID': pid,
+    'AppointmentRecord.AppointmentID': aid
+  }, {
+    $set: {
+      'AppointmentRecord.$.Status':'Canceled'
+    }
+  }, <span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {<span class="cstat-no" title="statement not covered" >console.log('errrrrrrrr'+err);</span></span>
+<span class="cstat-no" title="statement not covered" >    res.send(err);</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    if(phid != '' &amp;&amp; phid != undefined){</span>
+<span class="cstat-no" title="statement not covered" >      phlebo.find({'PhleboID':phid}).then((docs) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        docs[0].AllocationStatus.map((item)=&gt;{</span>
+          // console.log(item.Slot1.AppointmentID,"$$",item.Slot1.PatientID,"$$",item.Date);
+<span class="cstat-no" title="statement not covered" >          if(item.Slot1.AppointmentID == aid &amp;&amp; item.Slot1.PatientID ==pid) {</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot1.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot1.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot1.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot1.AppointmentID = "";</span>
+          }
+          else <span class="cstat-no" title="statement not covered" >if(item.Slot2.AppointmentID == aid &amp;&amp; item.Slot2.PatientID == pid) {</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot2.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot2.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot2.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot2.AppointmentID = "";</span>
+          }
+          else <span class="cstat-no" title="statement not covered" >if(item.Slot3.AppointmentID == aid &amp;&amp; item.Slot3.PatientID == pid) {</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot3.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot3.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot3.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot3.AppointmentID = "";</span>
+          }
+          else <span class="cstat-no" title="statement not covered" >if(item.Slot4.AppointmentID == aid &amp;&amp; item.Slot4.PatientID == pid) {</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot4.Status = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot4.Test = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot4.PatientID = "";</span>
+<span class="cstat-no" title="statement not covered" >            item.Slot4.AppointmentID = "";</span>
+          }
+        });
+<span class="cstat-no" title="statement not covered" >        docs[0].save(<span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (err)</span>
+<span class="cstat-no" title="statement not covered" >          throw err;</span>
+          else {
+<span class="cstat-no" title="statement not covered" >            res.send("success");</span>
+          }
+        });
+      });
+    }
+    else{
+<span class="cstat-no" title="statement not covered" >      res.send("success");</span>
+    }
+  }
+});
+};
+&nbsp;
+let editProfile = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  var PatientID = req.body.pid;</span>
+<span class="cstat-no" title="statement not covered" >  patient.update({</span>
+    'PatientID': PatientID
+  }, {
+    $set: {
+      'FirstName': req.body.FirstName,
+      'LastName': req.body.LastName,
+      'DateOfBirth': req.body.DateOfBirth,
+      'ContactNumber': req.body.ContactNumber,
+      'Gender': req.body.Gender,
+      'Address': req.body.Address
+    }
+  }, <span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      res.send(err);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      res.json({message: 'User updated successfully'});</span>
+    }
+  });
+};
+&nbsp;
+let sendMessage = (req, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  var PatientID = req.body.pid;</span>
+<span class="cstat-no" title="statement not covered" >  patient.update({</span>
+    'PatientID': PatientID
+  }, {
+    $set: {
+      'Message': req.body.Message
+    }
+  }, <span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      res.send(err);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      res.json({message: 'User updated successfully'});</span>
+    }
+  });
+};
+&nbsp;
+module.exports = {
+  addPatient,
+  addAppointment,
+  viewPatients,
+  viewPatientWithId,
+  viewAppointment,
+  reScheduleAppointment,
+  scheduleAppointment,
+  cancelAppointment,
+  editProfile,
+  viewParticularAppointment,
+  sendMessage
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Aug 29 2017 16:05:56 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

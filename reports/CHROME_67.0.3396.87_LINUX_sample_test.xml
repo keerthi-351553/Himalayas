@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="sample_test"
+    errors="0" failures="0" hostname="" id="" package="sample_test" skipped="0"
+    tests="1" time="23.87" timestamp="Mon, 25 Jun 2018 12:48:50 GMT">
+  
+    <testcase name="Test 1 : Check If Max Health Care URL is accessibles " classname="sample_test" time="23.87" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

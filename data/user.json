@@ -1,0 +1,8 @@
+{"_id":{"$oid":"598d780cbc058f290c4724f0"},"Username":"keerthi","Password":"keerthi","Loginid":"keerthi","Role":"CO","__v":0}
+{"_id":{"$oid":"598d7825bc058f290c4724f1"},"Username":"mayanka","Password":"mayanka","Loginid":"mayanka","Role":"CC","__v":0}
+{"_id":{"$oid":"598d7847bc058f290c4724f2"},"Username":"tarun","Password":"tarun","Loginid":"tarun","Role":"PH","__v":0}
+{"_id":{"$oid":"598d7866bc058f290c4724f3"},"Username":"kp","Loginid":"kp","Role":"PA","__v":0}
+{"_id":{"$oid":"598d789fbc058f290c4724f5"},"Username":"raki","Password":"max@123","Loginid":"PA1","Role":"PA","__v":0}
+{"_id":{"$oid":"598d3fd901bd4030900cf3f5"},"AppointmentRecord":[{"_id":{"$oid":"598d403a6f76b93788cda4bb"},"AssignedPhelbo":{"CheckOut":"00:00","CheckIn":"00:00","ID":"PH1","Name":"Rajesh"},"Report":"","Status":"Assigned","Test":"Blood","PreferredDate":"17/08/2017","PreferredTime":"10:00","AppointmentID":"AP4"},{"_id":{"$oid":"598d40566f76b93788cda4bc"},"AssignedPhelbo":{"CheckOut":"00:00","CheckIn":"00:00","ID":"PH2","Name":"Rakesh"},"Report":"","Status":"Assigned","Test":"Blood","PreferredDate":"15/08/2017","PreferredTime":"13:00","AppointmentID":"AP1"}],"ProfilePhoto":"","ContactNumber":"9487653012","Address":"21/5, xyz street, abc nagar","Gender":"Male","DateOfBirth":"25/10/1972","Age":46,"LastName":"Bansal","FirstName":"Raj","PatientID":"PA3","__v":0}
+{"_id":{"$oid":"598d789fbc058f290c4724f4"},"AppointmentRecord":[],"ProfilePhoto":"","ContactNumber":"9587654012","Address":"21/5, xyz street, abc nagar","Gender":"Male","DateOfBirth":"25/10/1972","Age":46,"LastName":"Bansal","FirstName":"raki","PatientID":"PA1","__v":0}
+{"_id":{"$oid":"59943712263b61b8a82730b7"},"Username":"PA3","Password":"1234","Role":"PA"}

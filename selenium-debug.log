@@ -1,0 +1,20 @@
+12:45:51.151 INFO - Launching a standalone Selenium Server
+12:45:51.425 INFO - Java: Oracle Corporation 25.161-b12
+12:45:51.425 INFO - OS: Linux 4.13.0-1011-azure amd64
+12:45:51.506 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
+12:45:52.027 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform LINUX
+12:45:52.028 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform LINUX
+12:45:52.028 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:45:52.028 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+12:45:52.030 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform LINUX
+12:45:52.038 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+12:45:52.038 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+12:45:52.319 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+12:45:52.320 INFO - Selenium Server is up and running
+12:45:54.318 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Sample Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, disable-gpu], binary=/usr/bin/google-chrome}, platform=ANY}]])
+12:45:54.358 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Sample Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, disable-gpu], binary=/usr/bin/google-chrome}, platform=ANY}]
+Starting ChromeDriver 2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881) on port 23987
+Only local connections are allowed.

@@ -1,0 +1,145 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+.phleopage{
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.page-header{
+    margin-bottom: 10px;
+}
+.btn btn-default  btn-group-sm{
+  margin-bottom: 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    /*position: absolute;*/
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    /*margin-left: 50px;*/
+    float: right;
+    margin-top: -24%;
+}
+#b1 {
+  color: gray;
+  margin-left: 9%;
+  font-size: 25px;
+}
+#b1:hover {
+  color:white;
+  text-decoration: none;
+}
+#b1:focus,#b1:active {
+   outline: none !important;
+}
+#ic {
+  font-size: 25px !important;
+  color: white !important;
+  cursor: pointer !important;
+}
+#ic:hover {
+  color: black !important;
+}
+#icname {
+  color:white !important;
+  font-size: 182% !important;
+  margin-left: 3% !important;
+  cursor: pointer !important;
+}
+#icname:hover {
+  color: black !important;
+}
+.l1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  //font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.l1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.l1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.l1:hover span {
+  padding-right: 25px;
+}
+
+.l1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.l2 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  //font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.l2 span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.profileImage{
+height: 150px;
+width: 150px;
+border-radius: 50%;
+}
